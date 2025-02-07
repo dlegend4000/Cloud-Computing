@@ -1,0 +1,31 @@
+# Use this IO Map for the Port Forwarding Tunnel Connection
+
+components:
+  Distance Sensor:
+    instruments:
+      sensor:
+        attributes:
+          state:
+            ioMaps:
+              state:
+                unique_id: "localhost"
+                model: PhidgetSBC4
+                vendor: Phidget
+                description: Used to control Stepper Motor and Distance Sensor
+                protocol: Static
+                address: "localhost"
+                port: "8081"
+  Slider:
+    instruments:
+      stepper:
+        attributes:
+          state:
+            ioMaps:
+              state:
+                unique_id: "localhost"
+                model: PhidgetSBC4
+                vendor: Phidget
+                description: Used to control Stepper Motor and Distance Sensor
+                protocol: Static
+                address: "localhost"
+                port: "8081"

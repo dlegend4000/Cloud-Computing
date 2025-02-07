@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "Training Package"
+version = "0.1.0"
+description = "Demo for Onsite Training"
+authors = ["Krystianne Vega <kvega@consynsys.com>"]
+packages = [
+    { include = "app", from = "./"},
+    { include = "io1", from = "./"}
+]
+
+[[tool.poetry.source]]
+name = "procaaso"
+url = "https://pypi.procaas.us/simple/"
+default = false
+secondary = true
+
+[tool.paracloud.definitions]
+app = {main = "ens.py", type = "app_task"}
+io1 = {main = "ens.py", type = "io_task"}
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-statemachine = "^0.8.0"
+slackclient = "^2.9.4"
+requests = "^2.28.1"
+pyYAML = "^6.0"
+Phidget22 = "^1.13.20230203"
+pydantic = "^1.10.5"
+procaaso-state-machine = "0.0.3"
+procaaso-client = "^0.1.14"
+procaaso-log  = "0.3.2"
+simple-pid = "^1.0.1"
+cpppo = "^4.4.2"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

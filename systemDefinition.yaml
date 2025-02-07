@@ -1,0 +1,183 @@
+components:
+  Distance Sensor:
+    instruments:
+      sensor:
+        attributes:
+          state:
+            default:
+              current_distance: 0.0
+              home_distance: 0.0
+              target_distance: 0.0
+            stateSchemaId: pharmagenbio.procaaso.io/schemas/beta-task-app/attribute/state/SensorState
+    ports: {}
+    render:
+      - -1803
+      - 155
+    visual:
+      $ref: "#/visuals/Distance Sensor"
+      flairs:
+        distancepv:
+          backgroundColor: "#ededed00"
+          default: "0.0"
+          placement:
+            x: 0
+            y: -37
+          suffix: mm
+          textColor: black
+          textSize: M
+          type: label
+        nameLabel:
+          backgroundColor: transparent
+          default: Sensor
+          placement:
+            x: 0
+            y: 40
+          textColor: black
+          textSize: S
+          type: label
+      input:
+        distancepv: $.stream.sensor.state.current_distance
+  Phidget SBC4:
+    componentType: hidden
+    instruments:
+      hub:
+        attributes:
+          state:
+            default:
+              distance: 0.0
+              position: 0.0
+            stateSchemaId: genbiopharma.paracloud.ai/schemas/beta-task-app/attribute/state/Controller
+    ports: {}
+    render:
+      - -1688
+      - 298
+  Slider:
+    instruments:
+      stepper:
+        attributes:
+          button:
+            default:
+              text: Yay! You created a button
+            stateSchemaId: pharmagenbio.procaaso.io/schemas/beta-task-app/attribute/button/Slider
+          state:
+            default:
+              target_position: 0.0
+            stateSchemaId: pharmagenbio.procaaso.io/schemas/beta-task-app/attribute/state/Slider
+    ports: {}
+    render:
+      - -1768
+      - 64
+    visual:
+      $ref: "#/visuals/Slider"
+      flairs:
+        nameLabel:
+          backgroundColor: transparent
+          default: Slider
+          placement:
+            x: 0
+            y: 30
+          textColor: black
+          textSize: S
+          type: label
+        positionpv:
+          backgroundColor: "#ededed00"
+          default: "0.0"
+          placement:
+            x: 0
+            y: -30
+          suffix: steps
+          textColor: black
+          textSize: M
+          type: label
+      input:
+        positionpv: $.stream.stepper.state.target_position
+      size:
+        height: 320
+        width: 320
+  Temperature and Humidity Sensor:
+    instruments:
+      thermohygrometer:
+        attributes:
+          state:
+            default:
+              temperature: 0.0
+              humidity: 0.0
+            stateSchemaId: pharmagenbio.procaaso.io/schemas/trial-site/attribute/state/env
+    ports: {}
+    render:
+      - -1540
+      - 130
+    visual:
+      $ref: "#/visuals/Temperature and Humidity Sensor"
+      flairs:
+        nameLabel:
+          backgroundColor: transparent
+          default: Temperature Sensor
+          placement:
+            x: 0
+            y: 30
+          textColor: black
+          textSize: M
+          type: label
+        temperaturepv:
+          backgroundColor: transparent
+          default: "0"
+          placement:
+            x: 0
+            y: -30
+          suffix: "\xB0C"
+          textColor: black
+          textSize: M
+          type: label
+      input:
+        nameLabel: $.none
+        temperaturepv: $.none
+      size:
+        height: 72
+        width: 72
+  phase:
+    componentType: hidden
+    instruments:
+      phase:
+        attributes:
+          cmd:
+            default:
+              abort: false
+              hold: false
+              load: false
+              path: ""
+              restart: false
+              start: false
+            stateSchemaId: pharmagenbio.procaaso.io/schemas/beta-task-app/attribute/state/BatchCmd
+          state:
+            default:
+              abort: false
+              display: ""
+              hold: false
+              load: false
+              path: ""
+              restart: false
+              start: false
+              state: 0
+            stateSchemaId: pharmagenbio.procaaso.io/schemas/beta-task-app/attribute/state/BatchCmdState
+    ports: {}
+    render:
+      - -1792
+      - 285
+connectors: {}
+description: This project will teach you how to add components to your system definition
+name: Trial Site Follow Along Project
+operationMode: BATCH_BASED
+visuals:
+  Distance Sensor:
+    flairs: {}
+    id: VSULB2B034995A5B4B3F93B98CFB15F7321B
+    version: 0
+  Slider:
+    flairs: {}
+    id: VSUL123A9BC88C9E43DAA0C9F5A1CDEC49F6
+    version: 18
+  Temperature and Humidity Sensor:
+    flairs: {}
+    id: VSUL7D2AAFEAD1D54EC4BC069A55333487BC
+    version: 4

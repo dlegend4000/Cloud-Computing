@@ -1,0 +1,34 @@
+{
+    "name": "DCU student package",
+    "version": "0.0.2",
+    "description": "ENS Package for Trial Site Tutorials",
+    "keywords": [
+        "Training"
+    ],
+    "homepage": "https://github.com/ConSynSys-Automation/betaTrain",
+    "bugs": {
+        "url": "Need to make URL for this",
+        "email": "kvega@consynsys.com"
+    },
+    "license": "GNU General Public License version 3",
+    "author": {
+        "name": "Krystianne Vega",
+        "url": "https://github.com/krystianne",
+        "email": "kvega@consynsys.com"
+    },
+    "maintainers":[
+        {
+            "name":"Krystianne Vega",
+            "url":"https://github.com/krystianne",
+            "email":"kvega@consynsys.com"
+        }
+    ],
+    "files": [],
+    "views": "exclude",
+    "tasks": "tasks",
+    "buildSystem": {
+        "version": "0.1.1"
+    },
+    "deploymentConfiguration": {}
+
+}

@@ -1,0 +1,29 @@
+# Use this file for the IO Map Follow Along
+
+components:
+  Distance Sensor:
+    instruments:
+      sensor:
+        attributes:
+          state:
+            ioMaps:
+              state:
+                unique_id: "195.168.1.11"
+                model: PhidgetSBC4
+                vendor: Phidget
+                description: Used to control Stepper Motor and Distance Sensor
+                protocol: Static
+                address: "195.168.1.11"
+  Slider:
+    instruments:
+      stepper:
+        attributes:
+          state:
+            ioMaps:
+              state:
+                unique_id: "195.168.1.11"
+                model: PhidgetSBC4
+                vendor: Phidget
+                description: Used to control Stepper Motor and Distance Sensor
+                protocol: Static
+                address: "195.168.1.11"
